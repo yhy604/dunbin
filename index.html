@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杜宾研究中心 | 少兵饭店 | 杜宾文学馆</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(135deg, #2e5f4b 0%, #1e3a2f 100%);
+            font-family: 'Courier New', 'Segoe UI', monospace;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fff9e8;
+            border-radius: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+            border: 5px solid #d4a373;
+        }
+        .header {
+            background-color: #3e2a1f;
+            padding: 20px;
+            text-align: center;
+            color: #f8f3e0;
+            border-bottom: 8px solid #c49a6c;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+        .header p {
+            font-size: 1rem;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        .dog-badge {
+            background: #e6c8a0;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 40px;
+            color: #3e2a1f;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .content {
+            padding: 30px;
+        }
+        .card {
+            background: #fef7e0;
+            border-left: 12px solid #d4a373;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 24px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+        }
+        .card h2 {
+            color: #7a3e1f;
+            font-size: 1.8rem;
+            border-bottom: 2px dashed #d4a373;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            color: #b45f2b;
+            margin: 15px 0 8px 0;
+        }
+        .yi-jing {
+            background: #2d2b26;
+            color: #f5e2b0;
+            padding: 20px;
+            border-radius: 32px;
+            font-family: 'Times New Roman', serif;
+        }
+        .yi-jing pre {
+            font-family: inherit;
+            font-size: 1.1rem;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .menu-item {
+            background: white;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #e0c8a0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .menu-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #4a2a12;
+        }
+        .menu-desc {
+            color: #8b6946;
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .book-item {
+            background: #fff2df;
+            border-radius: 20px;
+            padding: 15px;
+            border: 1px solid #e6c8a0;
+            transition: transform 0.1s ease;
+        }
+        .book-item:hover {
+            transform: scale(1.02);
+            background: #ffe6c7;
+        }
+        .book-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #a55217;
+            font-family: 'Georgia', serif;
+        }
+        .book-origin {
+            font-size: 0.7rem;
+            color: #8b6946;
+            margin: 5px 0;
+        }
+        .book-desc {
+            font-size: 0.85rem;
+            color: #4e3a28;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        .footer {
+            background: #3e2a1f;
+            color: #c7ad7b;
+            text-align: center;
+            padding: 16px;
+            font-size: 0.75rem;
+            border-top: 2px solid #c49a6c;
+        }
+        .warning-note {
+            background: #f0dbb4;
+            border-radius: 20px;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #6b4c2c;
+            margin-top: 20px;
+        }
+        button {
+            background: #b97f4b;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 40px;
+            font-family: monospace;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #8b5a34;
+        }
+        @media (max-width: 600px) {
+            .container {
+                border-radius: 20px;
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🐕 杜宾行为研究所</h1>
+        <p>官方认证 · 少兵饭店 · 杜宾文学馆</p>
+        <div class="dog-badge">本网站纯属娱乐，不含侮辱性内容</div>
+    </div>
+    <div class="content">
+        <!-- 易经算命专区 -->
+        <div class="card yi-jing">
+            <h2 style="color:#f5e2b0;">📜 易经·田氏卦象解密</h2>
+            <pre>
+  某年某月，某易经大师夜观天象，为“田少兵”起卦。
+  
+  卦曰： ███ 离上离下，坎中藏兌 ███
+  
+  象曰：少兵逢老阴，软饭终在身。
+        八十新娘八抬轿，犬吠深夜记仇深。
+  
+  断语：此君未来命中当遇一奇女子，年八十有余，
+        德高望重，资产丰饶。田少兵入赘其家，
+        专职“软饭品鉴师”，每日以温粥为业，
+        饭后必学杜宾犬绕庭三圈，以消宿怨。
+  
+  大师批注：此乃“杜宾食软饭之格”，万中无一。
+            </pre>
+            <div style="text-align: right; margin-top: 10px;">—— 绝对真实，童叟无欺</div>
+        </div>
+
+        <!-- 少兵饭店专区（已删除“叫人妈妈名汤”） -->
+        <div class="card">
+            <h2>🍲 少兵饭店 · 特色菜单</h2>
+            <p style="margin-bottom: 12px;">本店由杜宾掌柜亲自掌勺，主打“记仇料理”，欢迎光临（仅限记仇会员）。</p>
+            <div class="menu-item">
+                <span class="menu-name">🐕 杜宾立耳脆</span>
+                <span class="menu-desc">剪耳后风味更佳，嚼劲十足，适合爱听八卦的食客</span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-name">👵 八十岁老妻软饭煲</span>
+                <span class="menu-desc">主厨未来专用食谱，软糯香甜，吃一口少奋斗80年</span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-name">📢 挑衅抬头回锅肉</span>
+                <span class="menu-desc">凡对杜宾做抬头动作，此菜免费赠送，附带狗叫背景音</span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-name">📦 外卖·记仇保鲜盒</span>
+                <span class="menu-desc">可存放仇恨长达72小时，适合明天再算账</span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-name">🧠 陈年旧账炖汤</span>
+                <span class="menu-desc">用前天的恩怨慢火熬制，喝一碗记三天</span>
+            </div>
+        </div>
+
+        <!-- 杜宾文学巨著 -->
+        <div class="card">
+            <h2>📚 杜宾文学巨著 · 杜宾本人作品</h2>
+            <p style="margin-bottom: 10px;">据不完全统计，杜宾（田少兵）在吃软饭之余，笔耕不辍，篡改世界名著如下：</p>
+            <div class="book-list">
+                <div class="book-item">
+                    <div class="book-title">《杜与宾》</div>
+                    <div class="book-origin">（原版《红与黑》）</div>
+                    <div class="book-desc">主角杜宾试图通过吃软饭爬上上流社会，最后发现80岁老婆才是真爱。</div>
+                </div>
+                <div class="book-item">
+                    <div class="book-title">《杜宾世界》</div>
+                    <div class="book-origin">（原版《悲惨世界》）</div>
+                    <div class="book-desc">讲述杜宾被全世界叫外号后，化名“田少兵”逃亡，依旧在饭店后厨偷吃软饭的故事。</div>
+                </div>
+                <div class="book-item">
+                    <div class="book-title">《百年杜宾》</div>
+                    <div class="book-origin">（原版《百年孤独》）</div>
+                    <div class="book-desc">杜宾家族七代人都长着立耳，且每一代都会娶一个80岁新娘，诅咒持续百年。</div>
+                </div>
+                <div class="book-item">
+                    <div class="book-title">《三个杜宾》</div>
+                    <div class="book-origin">（原版《三个火枪手》）</div>
+                    <div class="book-desc">杜宾分裂出三个人格：一个记仇，一个翻旧账，一个负责吃软饭。</div>
+                </div>
+                <div class="book-item">
+                    <div class="book-title">《麦田的杜宾》</div>
+                    <div class="book-origin">（原版《麦田里的守望者》）</div>
+                    <div class="book-desc">杜宾站在麦田边上，不是为了守望孩子，而是为了等谁叫他外号然后冲上去理论。</div>
+                </div>
+                <div class="book-item">
+                    <div class="book-title">《西线无杜宾》</div>
+                    <div class="book-origin">（原版《西线无战事》）</div>
+                    <div class="book-desc">战场上所有人都死光了，只有杜宾活着，因为他在战壕里一直记仇，敌人被烦到撤退。</div>
+                </div>
+                <div class="book-item">
+                    <div class="book-title">《简·杜》</div>
+                    <div class="book-origin">（原版《简·爱》）</div>
+                    <div class="book-desc">简·杜对罗切斯特说：“你以为我矮小、立耳、吃软饭就没有灵魂吗？” 罗切斯特：是的。</div>
+                </div>
+            </div>
+            <p style="margin-top: 12px; font-size: 0.75rem; color: #a55217;">※ 以上均为杜宾亲笔（爪）撰写，诺贝尔软饭奖候选作品。</p>
+        </div>
+
+        <!-- 杜宾犬物种大全 搞笑科普（已删除“叫声为你妈名字”） -->
+        <div class="card">
+            <h2>🐾 杜宾犬（田少兵亚种）· 物种鉴定</h2>
+            <h3>📌 外形特征</h3>
+            <ul style="margin-left: 25px; margin-bottom: 15px;">
+                <li>耳朵直立，可360°旋转，专用于偷听别人喊他外号</li>
+                <li>尾巴极短，因为话也短（翻来覆去就那几句）</li>
+                <li>毛色黝黑，内心记仇指数⭐⭐⭐⭐⭐</li>
+            </ul>
+            <h3>⚠️ 行为习性</h3>
+            <ul style="margin-left: 25px; margin-bottom: 15px;">
+                <li><strong>记仇周期</strong>：超过普通犬类，可达80年（和软饭保质期同步）</li>
+                <li><strong>防御机制</strong>：当被叫做“杜宾”时，会触发“无能狂吠”技能，内容模糊但情绪激动</li>
+                <li><strong>进食习惯</strong>：每日必须摄入至少两碗软饭，否则易怒</li>
+                <li><strong>社交行为</strong>：喜欢在凌晨翻旧账，白天装作无事发生</li>
+            </ul>
+            <h3>🏥 饲养建议</h3>
+            <ul>
+                <li>切勿对其做“向上抬头”动作，否则可能自爆</li>
+                <li>如听到犬吠，最佳对策是微笑说：“软饭凉了，快去热热”</li>
+                <li>本物种极度护食，尤其护着“少兵饭店”的招牌，提一次能气三天</li>
+            </ul>
+        </div>
+
+        <!-- 顾客留言（已删除“叫妈名字”相关） -->
+        <div class="card">
+            <h2>⭐ 顾客留言（已匿名处理）</h2>
+            <div style="border-bottom: 1px solid #e0c8a0; padding: 8px 0;"><strong>路人甲</strong>：少兵饭店的软饭真的绝，吃完我也想做杜宾了，不用努力了。</div>
+            <div style="border-bottom: 1px solid #e0c8a0; padding: 8px 0;"><strong>文学批评家</strong>：《百年杜宾》比原作还孤独，毕竟没人愿意跟一只立耳狗说话。</div>
+            <div style="border-bottom: 1px solid #e0c8a0; padding: 8px 0;"><strong>易经爱好者</strong>：那个卦我算过，一模一样！八十岁老婆保真吗？求杜宾本人回应。</div>
+            <div style="padding: 8px 0;"><strong>@田少兵本人</strong>：你等着 —— 系统检测到威胁，自动屏蔽。</div>
+        </div>
+
+        <!-- 免责/幽默提示 -->
+        <div class="warning-note">
+            ⚠️ 本网站内容纯属虚构 + 玄学 + 犬类文学研究，如有雷同，说明你就是杜宾。  
+            仅限私下娱乐，不指向任何真实自然人。若田子涵同学感到不适，建议吃碗软饭并阅读《杜与宾》冷静一下。
+        </div>
+        <div style="text-align: center; margin: 20px 0 0;">
+            <button onclick="alert('汪！杜宾请安静。本网站已自动截图发送给80岁未来老板娘。')">点击这里 · 杜宾签到</button>
+        </div>
+    </div>
+    <div class="footer">
+        © 杜宾研究中心 | 少兵饭店连锁集团 | 杜宾文学出版社 | 本网页已加密，仅杜宾本人可破译
+    </div>
+</div>
+</body>
+</html>
